@@ -1,4 +1,4 @@
-package net.vincedgy.aws;
+package net.vincedgy.aws.library;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

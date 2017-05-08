@@ -34,7 +34,7 @@ public class LibraryApplicationWebSecurityConfig extends WebSecurityConfigurerAd
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth
                 .inMemoryAuthentication()
-                .withUser("user").password("password").roles("USER");
+                .withUser("user").password("password").roles("USER", "ACTUATOR");
     }
 }
 

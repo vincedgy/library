@@ -2,15 +2,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
-<head>
+
+<head th:substituteby="header :: copy">
     <title>Spring Security Example</title>
 </head>
+
 <body>
 <h1>Welcome!</h1>
 
-
 <div></div>
 
-<p>Click <a th:href="@{/hello}">here</a> to see a greeting.</p>
+<p>Click <a th:href="@{/greeting}">here</a> to see a greeting.</p>
+
+<div th:substituteby="footer :: copy"></div>
 </body>
 </html>

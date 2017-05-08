@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:substituteby="header :: copy">
+    <title>Spring Security Example</title>
+</head>
+<body>
+<h3 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h3>
+
+<form action="#" th:action="@{/greeting}" th:object="${greeting}" method="post">
+    <p>Id: <input type="text" th:field="*{id}"/></p>
+    <p>Message: <input type="text" th:field="*{content}"/></p>
+    <p><input type="submit" value="Submit"/> <input type="reset" value="Reset"/></p>
+</form>
+
+
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out"/>
+</form>
+
+<div th:substituteby="footer :: copy"></div>
+</body>
+</html>

@@ -66,6 +66,10 @@
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-java-sdk-sqs</artifactId>
         </dependency>
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk-s3</artifactId>
+		</dependency>
 
 
 		<!-- AWS dependencies if we work into the cloud -->

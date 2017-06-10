@@ -47,7 +47,7 @@ import java.util.Map.Entry;
  * the credentials file in your source directory.
  */
 @Service
-public class SimpleQueueService {
+public class AWSSQSAdapter_0 {
 
     @Value("${aws.region}")
     String awsRegion;
@@ -292,7 +292,7 @@ public class SimpleQueueService {
         }
     }
 
-    public SimpleQueueService() throws Exception {
+    public AWSSQSAdapter_0() throws Exception {
 
     }
 }

@@ -1,6 +1,6 @@
 package net.vincedgy.aws.library.controller;
 
-import net.vincedgy.aws.library.service.AWSSQSAdapter_0;
+import net.vincedgy.aws.library.service.AWSSQSAdapter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
@@ -10,7 +10,13 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class PostMessageController {
 
+    private AWSSQSAdapter awssqsAdapter;
+
     @Autowired
-    private AWSSQSAdapter_0 AWSSQSAdapter_0;
+    public PostMessageController(AWSSQSAdapter awssqsAdapter) {
+    }
+
+
+
 
 }

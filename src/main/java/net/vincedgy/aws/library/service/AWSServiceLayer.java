@@ -13,14 +13,21 @@ public class AWSServiceLayer {
     AWSCredentialsAdapter awsCredentialsAdapter;
     AWSDynamoDBAdapter awsDynamoDBAdapter;
     AWSS3Adapter awsS3Adapter;
+    AWSSQSAdapter awssqsAdapter;
+    AWSCognitoAdapter awsCognitoAdapter;
+
 
     @Autowired
     public AWSServiceLayer(AWSS3Adapter awss3Adapter,
                            AWSDynamoDBAdapter awsDynamoDBAdapter,
-                           AWSCredentialsAdapter awsCredentialsAdapter) {
+                           AWSCredentialsAdapter awsCredentialsAdapter,
+                           AWSSQSAdapter awssqsAdapter,
+                           AWSCognitoAdapter awsCognitoAdapter) {
         this.awsS3Adapter = awss3Adapter;
         this.awsDynamoDBAdapter = awsDynamoDBAdapter;
         this.awsCredentialsAdapter = awsCredentialsAdapter;
+        this.awssqsAdapter = awssqsAdapter;
+        this.awsCognitoAdapter = awsCognitoAdapter;
     }
 
     public AWSS3Adapter getAwsS3Adapter() {

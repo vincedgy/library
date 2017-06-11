@@ -73,7 +73,7 @@ public class AWSSQSAdapter {
      * @return
      * @throws Exception
      */
-    String createQueue(String queueName) throws Exception {
+    public String createQueue(String queueName) throws Exception {
         try {
             System.out.println("Creating a new SQS queue called " + queueName + "\n");
             CreateQueueRequest createQueueRequest = new CreateQueueRequest(queueName);
@@ -92,7 +92,7 @@ public class AWSSQSAdapter {
      *
      * @return
      */
-    List<String> getAllQueuesNames() throws Exception {
+    public List<String> getAllQueuesNames() throws Exception {
         List<String> queues;
         try {
             queues = new ArrayList<String>();
@@ -112,7 +112,7 @@ public class AWSSQSAdapter {
      *
      * @param message
      */
-    void sendMessage(String message) throws Exception {
+    public void sendMessage(String message) throws Exception {
         try {
             if (queueUrl.length() > 0 && message.length() > 0) {
                 this.getAmazonSQS().sendMessage(new SendMessageRequest(this.queueUrl, message));
@@ -143,7 +143,7 @@ public class AWSSQSAdapter {
      * deleteMessage : delete one message from the given
      * @param message
      */
-    public void deleteMessage(Message message) {
+     public void deleteMessage(Message message) {
         String messageReceiptHandle;
         try {
             messageReceiptHandle = message.getReceiptHandle();

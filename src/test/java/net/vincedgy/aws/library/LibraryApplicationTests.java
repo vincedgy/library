@@ -1,6 +1,6 @@
 package net.vincedgy.aws.library;
 
-import net.vincedgy.aws.library.service.AWSSQSAdapter_0;
+import net.vincedgy.aws.library.service.AWSSQSAdapter;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,7 @@ import org.springframework.util.Assert;
 public class LibraryApplicationTests {
 
     @Autowired
-	AWSSQSAdapter_0 AWSSQSAdapter_0;
+	AWSSQSAdapter awssqsAdapter;
 
 	@Test
 	public void contextLoads() {
@@ -21,7 +21,7 @@ public class LibraryApplicationTests {
 
 	@Test
 	public void testSimpleQueueService() {
-        Assert.isInstanceOf(AWSSQSAdapter_0.class, AWSSQSAdapter_0);
+        Assert.isInstanceOf(AWSSQSAdapter.class, awssqsAdapter);
 	}
 
 }
